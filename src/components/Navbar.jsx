@@ -1,9 +1,13 @@
 import React from 'react';
-import { ShieldCheck, ShieldAlert, Cpu, Activity, LayoutDashboard, Network, Terminal, FileCode, CheckCircle2, CloudRain } from 'lucide-react';
+import { 
+  ShieldCheck, ShieldAlert, LayoutDashboard, Network, 
+  FileCode, CheckCircle2, Crosshair, DollarSign, Activity, 
+  Award, Bell, Sparkles 
+} from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, selectedScenario, setSelectedScenario, scenarios, isLiveMonitoring, setIsLiveMonitoring }) {
   return (
-    <header className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80 px-4 lg:px-8 py-3">
+    <header className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/80 px-4 lg:px-8 py-3">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
         {/* Brand & Identity */}
         <div className="flex items-center gap-3 w-full lg:w-auto justify-between">
@@ -53,19 +57,19 @@ export default function Navbar({ activeTab, setActiveTab, selectedScenario, setS
         <nav className="flex items-center gap-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800 overflow-x-auto max-w-full">
           <button
             onClick={() => setActiveTab('attack-path')}
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
               activeTab === 'attack-path'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
             }`}
           >
             <Network className="w-3.5 h-3.5" />
-            <span>Attack-Path Graph</span>
+            <span>Attack Path</span>
           </button>
 
           <button
             onClick={() => setActiveTab('executive')}
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
               activeTab === 'executive'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
@@ -76,47 +80,106 @@ export default function Navbar({ activeTab, setActiveTab, selectedScenario, setS
           </button>
 
           <button
-            onClick={() => setActiveTab('engineer')}
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
-              activeTab === 'engineer'
+            onClick={() => setActiveTab('mitre')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'mitre'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
             }`}
           >
-            <ShieldAlert className="w-3.5 h-3.5" />
-            <span>Findings & Rules</span>
+            <Crosshair className="w-3.5 h-3.5" />
+            <span>MITRE Matrix</span>
           </button>
 
           <button
-            onClick={() => setActiveTab('remediation')}
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
-              activeTab === 'remediation'
+            onClick={() => setActiveTab('iac')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'iac'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
             }`}
           >
             <FileCode className="w-3.5 h-3.5" />
-            <span>AI Copilot & Fixes</span>
+            <span>IaC Scanner</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('monte-carlo')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'monte-carlo'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <DollarSign className="w-3.5 h-3.5" />
+            <span>FAIR VaR</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('remediation')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'remediation'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>AI Copilot</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('drift')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'drift'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5" />
+            <span>Drift Timeline</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('crown-jewels')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'crown-jewels'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <Award className="w-3.5 h-3.5" />
+            <span>Crown Jewels</span>
           </button>
 
           <button
             onClick={() => setActiveTab('compliance')}
-            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
               activeTab === 'compliance'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Compliance Matrix</span>
+            <span>Compliance</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('webhooks')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
+              activeTab === 'webhooks'
+                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
+            }`}
+          >
+            <Bell className="w-3.5 h-3.5" />
+            <span>Webhooks</span>
           </button>
         </nav>
 
         {/* Cloud Scenario & Live Monitor Controls */}
-        <div className="hidden lg:flex items-center gap-3">
-          {/* Cloud Scenario Select */}
+        <div className="hidden xl:flex items-center gap-3">
           <div className="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5">
-            <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Environment:</span>
+            <span className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Env:</span>
             <select
               value={selectedScenario.id}
               onChange={(e) => {
@@ -132,20 +195,6 @@ export default function Navbar({ activeTab, setActiveTab, selectedScenario, setS
               ))}
             </select>
           </div>
-
-          {/* Continuous Monitor Toggle */}
-          <button
-            onClick={() => setIsLiveMonitoring(!isLiveMonitoring)}
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs font-medium transition-all ${
-              isLiveMonitoring
-                ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
-                : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-300'
-            }`}
-            title="Toggle Live Event Drift Monitoring"
-          >
-            <Activity className={`w-3.5 h-3.5 ${isLiveMonitoring ? 'animate-spin text-emerald-400' : ''}`} />
-            <span>{isLiveMonitoring ? 'Live Monitor Active' : 'Monitor Paused'}</span>
-          </button>
         </div>
       </div>
     </header>

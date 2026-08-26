@@ -6,18 +6,23 @@ import EngineerDashboard from './components/EngineerDashboard';
 import AiRemediationCopilot from './components/AiRemediationCopilot';
 import ComplianceView from './components/ComplianceView';
 import AiSecurityChat from './components/AiSecurityChat';
+import MitreMatrixView from './components/MitreMatrixView';
+import IacScannerView from './components/IacScannerView';
+import MonteCarloRiskView from './components/MonteCarloRiskView';
+import DriftTimelineView from './components/DriftTimelineView';
+import CrownJewelExplorer from './components/CrownJewelExplorer';
+import WebhookIntegrationView from './components/WebhookIntegrationView';
 import { ENTERPRISE_SCENARIOS } from './engine/cloudAssets';
-import { Bell, ShieldAlert, X } from 'lucide-react';
+import { ShieldAlert, X } from 'lucide-react';
 
 export default function App() {
   const [scenarios] = useState(ENTERPRISE_SCENARIOS);
   const [selectedScenario, setSelectedScenario] = useState(ENTERPRISE_SCENARIOS[0]);
-  const [activeTab, setActiveTab] = useState('attack-path'); // 'attack-path' | 'executive' | 'engineer' | 'remediation' | 'compliance'
+  const [activeTab, setActiveTab] = useState('attack-path');
   const [activeFinding, setActiveFinding] = useState(null);
   const [isLiveMonitoring, setIsLiveMonitoring] = useState(true);
   const [liveToast, setLiveToast] = useState(null);
 
-  // Simulate continuous cloud monitoring drift event
   useEffect(() => {
     if (!isLiveMonitoring) return;
 
@@ -41,7 +46,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 flex flex-col font-sans text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
-      {/* Navbar */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -55,7 +59,6 @@ export default function App() {
         setIsLiveMonitoring={setIsLiveMonitoring}
       />
 
-      {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
         {activeTab === 'attack-path' && (
           <AttackPathVisualizer
@@ -79,6 +82,18 @@ export default function App() {
           />
         )}
 
+        {activeTab === 'mitre' && (
+          <MitreMatrixView scenario={selectedScenario} />
+        )}
+
+        {activeTab === 'iac' && (
+          <IacScannerView />
+        )}
+
+        {activeTab === 'monte-carlo' && (
+          <MonteCarloRiskView />
+        )}
+
         {activeTab === 'engineer' && (
           <EngineerDashboard
             scenario={selectedScenario}
@@ -93,18 +108,28 @@ export default function App() {
           />
         )}
 
+        {activeTab === 'drift' && (
+          <DriftTimelineView scenario={selectedScenario} />
+        )}
+
+        {activeTab === 'crown-jewels' && (
+          <CrownJewelExplorer scenario={selectedScenario} />
+        )}
+
         {activeTab === 'compliance' && (
           <ComplianceView scenario={selectedScenario} />
         )}
+
+        {activeTab === 'webhooks' && (
+          <WebhookIntegrationView scenario={selectedScenario} />
+        )}
       </main>
 
-      {/* Floating AI Chat Assistant */}
       <AiSecurityChat
         scenario={selectedScenario}
         onSelectFinding={(f) => handleNavigateToFix(f)}
       />
 
-      {/* Continuous Monitoring Live Event Alert Toast */}
       {liveToast && (
         <div className="fixed bottom-6 left-6 z-50 max-w-md p-4 rounded-2xl glass-panel-glow border-l-4 border-l-rose-500 border-slate-700 shadow-2xl flex items-start gap-3 animate-in fade-in slide-in-from-bottom-6">
           <div className="p-2 rounded-xl bg-rose-500/20 text-rose-400">
@@ -128,7 +153,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950/60 py-6 px-4 text-center text-xs text-slate-500">
         <p>
           <strong>Cloud Misconfiguration AI</strong> — Developed by{' '}
