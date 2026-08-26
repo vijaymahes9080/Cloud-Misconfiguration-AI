@@ -11,7 +11,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "scan": "node bin/cloud-sec-ai.js"
+    "scan": "node bin/cloud-sec-ai.js",
+    "test": "node tests/riskEngine.test.js && node tests/iacScanner.test.js && node tests/attackPath.test.js"
   },
   "repository": {
     "type": "git",

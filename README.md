@@ -1,17 +1,18 @@
 # ☁️ Cloud Misconfiguration AI — Next-Generation AI Cloud Security Engineer
 
 [![GitHub Stars](https://img.shields.io/github/stars/vijaymahes9080/Cloud-Misconfiguration-AI?style=for-the-badge&color=blue)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/vijaymahes9080/Cloud-Misconfiguration-AI/ci.yml?style=for-the-badge&label=CI%2FCD)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI/actions)
 [![License](https://img.shields.io/badge/License-Apache_2.0-orange?style=for-the-badge)](LICENSE)
-[![Multi-Cloud Support](https://img.shields.io/badge/Multi--Cloud-AWS%20%7C%20Azure%20%7C%20GCP-007acc?style=for-the-badge)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI)
-[![Compliance](https://img.shields.io/badge/Compliance-CIS%20%7C%20NIST%20%7C%20SOC%202%20%7C%20ISO%2027001-emerald?style=for-the-badge)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI)
+[![Multi-Cloud Support](https://img.shields.io/badge/Multi--Cloud-AWS%20%7C%20Azure%20%7C%20GCP%20%7C%20K8s-007acc?style=for-the-badge)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI)
+[![Compliance](https://img.shields.io/badge/Compliance-CIS%20%7C%20NIST%20%7C%20SOC%202%20%7C%20ISO%2027001%20%7C%20PCI%20DSS-emerald?style=for-the-badge)](https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI)
 
 > **"Don't just tell me how many vulnerabilities exist. Tell me which cloud weakness can cause the most business damage—and exactly what I should fix first."**
 
 ---
 
-## 🌟 Executive Summary
+## 🌟 Executive Overview
 
-**Cloud Misconfiguration AI** upgrades standard Cloud Security Posture Management (CSPM) from a passive rule-scanner into an **AI Cloud Security Engineer**. It continuously discovers cloud infrastructure, detects multi-vector misconfigurations, constructs multi-hop attack path graphs, models blast radius intelligence, and prioritizes remediation based on **Business Risk Impact**.
+**Cloud Misconfiguration AI** upgrades standard Cloud Security Posture Management (CSPM) from a passive rule-scanner into an **AI Cloud Security Engineer**. It continuously discovers cloud infrastructure, detects multi-vector misconfigurations, constructs multi-hop attack path graphs, models blast radius intelligence, and prioritizes remediation based on **Business Risk Impact & Financial Value-at-Risk (VaR)**.
 
 ```
     DISCOVER ➔ UNDERSTAND ➔ DETECT ➔ CONNECT ➔ PRIORITIZE ➔ EXPLAIN ➔ REMEDIATE ➔ MONITOR
@@ -19,115 +20,90 @@
 
 ---
 
-## 📸 Architecture & Feature Showcase
+## 🚀 Complete Platform Capabilities & 10 Flagship Modules
 
-| 🧠 AI Attack Path Graph | 💰 Business Risk Matrix |
-| :---: | :---: |
-| Maps multi-hop attack chains from public entry to crown jewel assets | Formulaic scoring: $Severity \times Criticality \times Sensitivity \times Exposure$ |
-
-| 🛡️ 1-Click AI Remediation | 🧬 Cloud Digital Twin |
-| :---: | :---: |
-| Generates Terraform, CloudFormation, & IAM least-privilege policies | Real-time topological representation of Multi-Cloud inventory |
-
----
-
-## 🚀 Key Innovations & Pillars
-
-### 1. 🧠 AI Cloud Discovery Engine & Digital Twin
-Automatically maps multi-cloud asset inventories across AWS, Azure, and GCP into a unified digital twin graph:
-- **Compute**: EC2, EKS, ECS, Lambda, Azure VMs, Cloud Functions.
-- **Storage**: S3 buckets, Azure Blob containers, GCS buckets, EBS volumes.
-- **Databases**: RDS instances, DynamoDB, MongoDB, Redis caches, CloudSQL.
-- **IAM**: Users, Roles, Policies, Service Accounts, AssumeRole trust hierarchies.
-- **Network**: VPCs, Subnets, Internet Gateways, Security Groups, NSGs, Route Tables.
-
-### 2. 🔍 Multi-Vector Misconfiguration Detection
-- **Storage**: Public read/write, missing SSE-KMS, anonymous policies, disabled versioning.
-- **IAM**: Wildcard (`*`) actions, assume-role escalation chains, cross-account trust leaks, lack of MFA.
-- **Database**: `0.0.0.0/0` exposure, plaintext transit, unencrypted storage, exposed admin ports.
-- **Network**: Management ports (SSH 22, RDP 3389, Database ports) open to the internet.
-
-### 3. 🕸️ AI Attack-Path Graph
-Instead of 100 disjointed alerts, AI chains low and medium findings into single critical attack chains:
-```
-Internet ➔ Public Ingress VM ➔ Weak IAM Role ➔ S3 Access ➔ Customer DB Backup ➔ PII Breach
-```
-
-### 4. 💰 Business Risk Engine
-Quantifies risks by impact rather than raw CVSS:
-$$\text{Business Risk} = \text{Technical Severity} \times \text{Asset Criticality} \times \text{Data Sensitivity} \times \text{Exposure} \times \text{Exploitability} \times \text{Business Dependency}$$
-
-### 5. 🤖 AI Security Analyst Copilot
-Explains each finding in plain English, including:
-- **Why it matters**
-- **What is exposed**
-- **Exploitation hypothesis**
-- **Estimated financial/compliance blast radius**
-
-### 6. 🛠️ AI Remediation Copilot (Preview ➔ Approve ➔ Apply)
-Generates ready-to-deploy:
-- Terraform (`.tf`) least-privilege configurations
-- CloudFormation templates & AWS CLI commands
-- Tightened Security Group ingress rules
-- Least-privilege IAM JSON policies
-
-### 7. 🧪 Blast Radius Simulation
-Hypothetical "What-If" impact modeling:
-- **Affected resources**: 27
-- **Sensitive data assets**: 6
-- **Production critical services**: 3
-- **Compliance penalty risk**: High
-
-### 8. 🛡️ Security Compliance Frameworks
-Automated cross-mapping of findings to:
-- **CIS Benchmarks**
-- **NIST CSF & SP 800-53**
-- **SOC 2 Type II**
-- **ISO/IEC 27001**
-- **PCI DSS 4.0**
-- **GDPR & HIPAA**
+1. **🕸️ Interactive Attack-Path Visualizer**: Live multi-hop SVG/Canvas killchains with step-by-step exploit simulations.
+2. **💰 Business Risk Engine & Executive Dashboard**: Quantitative formula prioritizes findings protecting Crown Jewels over raw CVSS.
+3. **🎯 MITRE ATT&CK® for Cloud Heatmap**: Mapped to v14 Cloud Matrix tactics (Reconnaissance, Initial Access, Privilege Escalation, Exfiltration).
+4. **🔍 Shift-Left IaC Scanner**: Live static analysis for Terraform (`.tf`), OpenTofu, and Kubernetes manifests.
+5. **📊 Quantitative FAIR Monte Carlo Risk Simulator**: 1,000-sample probabilistic financial breach loss curves & Value-at-Risk (VaR).
+6. **🤖 AI Remediation Copilot**: 3-Step Human-in-the-Loop (`Preview ➔ Approve ➔ Apply`) generator for Terraform, Cloud CLI, and least-privilege IAM JSON policies.
+7. **📈 Configuration Drift Timeline**: Real-time audit log stream tracking unauthorized resource mutations and privilege drift.
+8. **👑 Crown Jewel Asset Explorer**: Asset classification and encryption posture tracker for PII and financial ledgers.
+9. **🛡️ Multi-Framework Compliance Matrix**: Automated scoring for CIS Benchmarks v3.0, NIST SP 800-53, SOC 2 Type II, ISO 27001, and PCI DSS 4.0.
+10. **🚨 Incident Alerting Webhook Dispatcher**: Slack BlockKit & Discord Embed incident notification payloads.
 
 ---
 
-## 🏛️ System Architecture
+## 🥊 Feature Matrix vs. Industry Tools
 
+| Capability | Legacy Scanners (Prowler) | Standard CSPM (AWS Security Hub) | Enterprise CSPM (Wiz / Prisma Cloud) | **Cloud Misconfiguration AI (Ours)** |
+| :--- | :---: | :---: | :---: | :---: |
+| **Multi-Cloud Discovery** | Partial | AWS Only | Full | **Full (AWS, Azure, GCP, K8s)** |
+| **Alert Paradigm** | Isolated 100+ alerts | Isolated rule checks | Graph-based | **Unified Multi-Hop Attack Killchain** |
+| **Business Risk Model** | CVSS Base | CVSS Base | Asset Criticality | **Multi-Factor FAIR + Crown Jewel ($ Liability)** |
+| **AI Security Analyst** | ❌ None | ❌ None | Basic Summaries | **Conversational Copilot + Exploit Hypothesis** |
+| **Remediation Speed** | Manual Docs | Manual Console | CLI snippets | **1-Click Preview ➔ Approve ➔ Apply (Terraform/CLI/JSON)** |
+| **Shift-Left IaC Scanner**| ❌ None | ❌ None | Separate Module | **Integrated Shift-Left Terraform & K8s Scanner** |
+| **Open Policy Agent (OPA)**| ❌ None | ❌ None | Add-on | **Built-in Rego Policy Generator** |
+
+---
+
+## ⚡ Quickstart & Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/vijaymahes9080/Cloud-Misconfiguration-AI.git
+cd Cloud-Misconfiguration-AI
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the Interactive Web Platform
+npm run dev
+
+# 4. Run the CLI Scanner
+npm run scan
+
+# 5. Run Automated Unit Tests
+npm test
 ```
-                 CLOUD ACCOUNTS
-             AWS / Azure / GCP
-                     │
-                     ▼
-             Cloud Connectors
-                     │
-                     ▼
-          Configuration Collector
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-        IAM       Network     Storage
-          │          │          │
-          └──────────┼──────────┘
-                     ▼
-             Configuration Graph
-                     │
-                     ▼
-              AI Risk Engine
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-       Detection  Attack Path  Business
-                    Analysis      Risk
-          │          │          │
-          └──────────┼──────────┘
-                     ▼
-              AI Security Copilot
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-       Dashboard   Alerts    Remediation
+
+### 🐳 Docker Deployment
+```bash
+docker compose up --build -d
 ```
 
 ---
 
-## 👨💻 Author & Maintainer
+## 📁 Repository Structure
+
+```
+├── .github/workflows/ci.yml       # Automated CI/CD build & security testing pipeline
+├── bin/cloud-sec-ai.js            # Standalone CLI Scanner tool
+├── docker/                        # Multi-stage Dockerfile & nginx configuration
+├── docker-compose.yml             # 1-click self-hosted container deployment
+├── docs/                          # Comprehensive Academic & Technical Specifications
+│   ├── MCA_FINAL_YEAR_PROJECT_REPORT.md
+│   ├── BENCHMARK_CSPM_COMPARISON.md
+│   ├── PRESENTATION_SLIDES_SPEC.md
+│   ├── RESEARCH_PAPER_LATEX.tex
+│   ├── ARCHITECTURE_DIAGRAMS.md
+│   ├── openapi.yaml
+│   ├── SOC2_TYPE_II_READINESS_GUIDE.md
+│   └── CONTRIBUTING.md
+├── sdk/                           # Developer SDKs for Python & Node.js
+│   ├── python/cloud_sec_ai/
+│   └── node/index.js
+├── src/                           # Web Platform Source Code
+│   ├── components/                # UI Dashboards & Visualizers
+│   └── engine/                    # Core Analytical & Risk Engines
+└── tests/                         # Automated Unit & Integration Tests
+```
+
+---
+
+## 👨‍💻 Author & Maintainer
 
 - **Developer**: Vijay Mahes
 - **Email**: [Vijaypradhap2004@gmail.com](mailto:Vijaypradhap2004@gmail.com)
