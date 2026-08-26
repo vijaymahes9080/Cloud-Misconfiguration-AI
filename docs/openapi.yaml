@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: Cloud Misconfiguration AI REST API
+  description: Next-Gen AI Cloud Security Engineer & Attack Path Orchestration API
+  version: 1.0.0
+  contact:
+    name: Vijay Mahes
+    email: Vijaypradhap2004@gmail.com
+servers:
+  - url: https://api.cloudmisconfig.ai/v1
+    description: Production Cloud Engine
+
+paths:
+  /scan/discover:
+    post:
+      summary: Ingest Multi-Cloud Assets & Build Digital Twin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                provider:
+                  type: string
+                  enum: [AWS, Azure, GCP]
+                accountCredentials:
+                  type: object
+      responses:
+        '200':
+          description: Digital Twin Topology Graph Generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  assetCount:
+                    type: integer
+                  nodes:
+                    type: array
+                    items:
+                      type: object
+
+  /risk/attack-paths:
+    get:
+      summary: Retrieve Synthesized Attack Killchains
+      parameters:
+        - name: accountId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of critical attack paths with business risk quantification
+
+  /remediation/generate:
+    post:
+      summary: Generate Automated Least-Privilege Terraform or Policy Patch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                findingId:
+                  type: string
+                targetFormat:
+                  type: string
+                  enum: [terraform, cli, policy, rego]
+      responses:
+        '200':
+          description: Remediation code snippet returned
