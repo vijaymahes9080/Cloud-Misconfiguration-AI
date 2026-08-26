@@ -10,6 +10,25 @@
 
 ---
 
+## 🎨 Interactive Platform Showcase (Light & Modern Theme)
+
+| 🧠 Interactive Attack-Path Killchain | 📊 Executive Posture & Score Dashboard |
+| :---: | :---: |
+| ![Attack Path Graph](images/attack_path_graph_light.png) | ![Executive Dashboard](images/executive_dashboard_light.png) |
+| *Visualizes multi-hop attack vectors from Internet Ingress to Crown Jewel S3 databases* | *Overall 0-100 score, domain breakdown, and quantitative financial liability* |
+
+| 🛠️ AI Remediation Copilot (Preview ➔ Approve ➔ Apply) | 🧬 Cloud Digital Twin & Topology |
+| :---: | :---: |
+| ![AI Remediation Copilot](images/ai_remediation_copilot_light.png) | ![Cloud Digital Twin](images/cloud_digital_twin_light.png) |
+| *1-Click generation of least-privilege Terraform (.tf), Cloud CLI, & IAM policies* | *Real-time topological inventory across Compute, Storage, IAM, and Network* |
+
+| 💰 Multi-Factor Business Risk Matrix | 🛡️ Regulatory Compliance Heatmap |
+| :---: | :---: |
+| ![Business Risk Matrix](images/business_risk_matrix_light.png) | ![Compliance Heatmap](images/compliance_heatmap_light.png) |
+| *Formulation: $Severity \times Criticality \times Sensitivity \times Exposure \times Exploitability$* | *Audit-ready scoring for CIS Benchmarks, NIST SP 800-53, SOC 2, ISO 27001 & PCI DSS* |
+
+---
+
 ## 🌟 Executive Overview
 
 **Cloud Misconfiguration AI** upgrades standard Cloud Security Posture Management (CSPM) from a passive rule-scanner into an **AI Cloud Security Engineer**. It continuously discovers cloud infrastructure, detects multi-vector misconfigurations, constructs multi-hop attack path graphs, models blast radius intelligence, and prioritizes remediation based on **Business Risk Impact & Financial Value-at-Risk (VaR)**.
@@ -92,6 +111,8 @@ docker compose up --build -d
 │   ├── openapi.yaml
 │   ├── SOC2_TYPE_II_READINESS_GUIDE.md
 │   └── CONTRIBUTING.md
+├── images/                        # High-resolution light theme UI & architecture previews
+├── linkedin.md                    # Ready-to-publish viral LinkedIn post copy & launch assets
 ├── sdk/                           # Developer SDKs for Python & Node.js
 │   ├── python/cloud_sec_ai/
 │   └── node/index.js
