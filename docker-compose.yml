@@ -1,0 +1,11 @@
+services:
+  cloud-sec-ai:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: cloud-misconfiguration-ai-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
