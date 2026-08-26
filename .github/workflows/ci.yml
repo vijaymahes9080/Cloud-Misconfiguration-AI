@@ -1,0 +1,37 @@
+name: Cloud Security AI CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-and-build:
+    name: Build, Lint & Security Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Platform Dependencies
+        run: npm ci
+
+      - name: Run CLI Cloud Security Scan
+        run: npm run scan
+
+      - name: Build Web Application
+        run: npm run build
+
+      - name: Verify Documentation Integrity
+        run: |
+          test -f README.md
+          test -f docs/MCA_FINAL_YEAR_PROJECT_REPORT.md
+          echo "Documentation verified successfully."
